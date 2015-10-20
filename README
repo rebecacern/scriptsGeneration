@@ -1,0 +1,30 @@
+Several things, based in HZZ:
+
+
+** To produce all cards:
+
+> python nameCards.py
+
+Requires inputs (in inputCards folder) and gamma_sm.py (Higgs width)
+
+
+** To submit a gridpack:
+
+> python sendGridpack.csh
+
+Requires templateSend.csh, for JHU Generator v6.2.8., use modified
+create_powheg_tarball.sh
+
+
+** To run the grids and get a LHE file:
+
+untar the gridpack in a folder, modify templateGrid.csh and run:
+
+> bsub -R "pool>30000" -q 2nw -J job1 < templateGrid.csh
+
+
+** To create MCFM lhe files:
+
+Modify input card in MCFM folder and run:
+
+> templateMCFM_RGS.csh

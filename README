@@ -1,19 +1,20 @@
 Several things, based in HZZ:
 
 
-** To produce all cards:
+** To produce the mass scan cards (October 2015):
 
 > python nameCards.py
 
-Requires inputs (in inputCards folder) and gamma_sm.py (Higgs width)
+Requires inputs (in inputCards folder) and gamma_sm.py (Higgs width). It is a direct copy of HZZ
 
 
-** To submit a gridpack:
+** To submit a gridpack in powheg:
 
 > python sendGridpack.csh
 
-Requires templateSend.csh, for JHU Generator v6.2.8., use modified
-create_powheg_tarball.sh
+Requires templateSend.csh 
+For JHU Generator v6.2.8., use modified create_powheg_tarball.sh in this folder.
+It can be adapated for any datacard, if no JHU used just select none.
 
 
 ** To run the grids and get a LHE file:

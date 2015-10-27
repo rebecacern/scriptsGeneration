@@ -1,11 +1,9 @@
-Several things, based in HZZ:
-
-
 ** To produce the mass scan cards (October 2015):
 
 > python nameCards.py
 
 Requires inputs (in inputCards folder) and gamma_sm.py (Higgs width). It is a direct copy of HZZ
+
 
 
 ** To submit a gridpack in powheg:
@@ -17,6 +15,17 @@ For JHU Generator v6.2.8., use modified create_powheg_tarball.sh in this folder.
 It can be adapated for any datacard, if no JHU used just select none.
 
 
+
+** To check powheg grids:
+
+inside the tarball there should be a file called: pwg-btlgrid.top 
+
+>  ./td pwg-btlgrid.top 
+
+Plots should be smooth and sinusoidal.
+
+
+
 ** To run the grids and get a LHE file:
 
 untar the gridpack in a folder, modify templateGrid.csh and run:
@@ -24,11 +33,13 @@ untar the gridpack in a folder, modify templateGrid.csh and run:
 > bsub -R "pool>30000" -q 2nw -J job1 < templateGrid.csh
 
 
-** To test a LHE
+
+** To test a LHE:
 
 Use out of the box the Latinos package:
 
 https://github.com/latinos/LatinoTreesLHE
+
 
 
 ** To create MCFM lhe files:
@@ -36,3 +47,24 @@ https://github.com/latinos/LatinoTreesLHE
 Modify input card in MCFM folder and run:
 
 > templateMCFM_RGS.csh
+
+
+
+** To upload LHE files to EOS:
+
+> cmsLHEtoEOSManager.py -n  -f  card.lhe > nameoflog.log&
+
+
+if you have .dat LHE files, they have to be renamed to .lhe before upload:
+
+> rename .dat .lhe *
+
+For several lhe files to be copied into one folder:
+
+> echo `ls -1 | grep lhe | tr "\n" "@" | sed -e s%lhe@%lhe,%g` | tr "\n" "@" | sed -e s%,@%@%g | tr "@" "\n" > files.txt
+
+and then:
+
+> cmsLHEtoEOSManager.py -n  -f `cat files.txt` > nameoflog.log&
+
+

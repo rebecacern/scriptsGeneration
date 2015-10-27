@@ -24,6 +24,13 @@ untar the gridpack in a folder, modify templateGrid.csh and run:
 > bsub -R "pool>30000" -q 2nw -J job1 < templateGrid.csh
 
 
+** To test a LHE
+
+Use out of the box the Latinos package:
+
+https://github.com/latinos/LatinoTreesLHE
+
+
 ** To create MCFM lhe files:
 
 Modify input card in MCFM folder and run:

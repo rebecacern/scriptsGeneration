@@ -1,5 +1,6 @@
 #!/bin/csh                  
 cd /afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/
 eval `scram runtime -csh`
-cd /afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/tmp/
-./runcmsgrid.sh 1000 12312 1 
+cd
+/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/tmp_210/
+./runcmsgrid.sh 10000 12312 1 

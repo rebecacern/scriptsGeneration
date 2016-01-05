@@ -2,21 +2,21 @@ import os, commands, time
 
 csh_template = 'templateSend.csh'
 
-mass = "115"
+mass = "300"
 
-#gg
-outdir = "submission_gridpack_gg_"+mass+"_October_22"
-model = 'gg_H_quark-mass-effects'
-powinput ='/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/genproductions/bin/Powheg/production/V2/13TeV/Higgs/gg_H_quark-mass-effects_JHUGen_HWW2L2Nu_NNPDF30_13TeV/gg_H_quark-mass-effects_NNPDF30_13TeV_M'+mass+'.input'
-tarball = 'gg_H_quark-mass-effects_HWW2L2Nu_M'+mass
-jhuinput = '/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/genproductions/bin/Powheg/production/V2/13TeV/Higgs/gg_H_quark-mass-effects_JHUGen_HWW2L2Nu_NNPDF30_13TeV/JHUGen_gg_H_WW2L2Nu_M'+mass+'.input'
+##gg
+#outdir = "submission_gridpack_gg_"+mass+"_November_3"
+#model = 'gg_H_quark-mass-effects'
+#powinput ='/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/genproductions/bin/Powheg/production/V2/13TeV/Higgs/gg_H_quark-mass-effects_JHUGen_HWW2L2Nu_NNPDF30_13TeV/gg_H_quark-mass-effects_NNPDF30_13TeV_M'+mass+'.input'
+#tarball = 'gg_H_quark-mass-effects_HWW2L2Nu_M'+mass
+#jhuinput = '/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/genproductions/bin/Powheg/production/V2/13TeV/Higgs/gg_H_quark-mass-effects_JHUGen_HWW2L2Nu_NNPDF30_13TeV/JHUGen_gg_H_WW2L2Nu_M'+mass+'.input'
 
 #VBF
-#outdir = "submission_gridpack_VBF_"+mass+"_October_22"
-#model = 'VBF_H'
-#powinput ='/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/genproductions/bin/Powheg/production/V2/13TeV/Higgs/VBF_H_JHUGen_HWW2L2Nu_NNPDF30_13TeV/VBF_H_M'+mass+'_NNPDF30_13TeV.input'
-#tarball = 'VBF_HWW2L2Nu_M'+mass
-#jhuinput = '/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/genproductions/bin/Powheg/production/V2/13TeV/Higgs/VBF_H_JHUGen_HWW2L2Nu_NNPDF30_13TeV/JHUGen_VBF_H_WW2L2Nu_M'+mass+'.input'
+outdir = "submission_gridpack_VBF_"+mass+"_November_3"
+model = 'VBF_H'
+powinput ='/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/genproductions/bin/Powheg/production/V2/13TeV/Higgs/VBF_H_JHUGen_HWW2L2Nu_NNPDF30_13TeV/VBF_H_M'+mass+'_NNPDF30_13TeV.input'
+tarball = 'VBF_HWW2L2Nu_M'+mass
+jhuinput = '/afs/cern.ch/work/r/rebeca/hww_signal_gridpacks_II/CMSSW_7_1_14/src/genproductions/bin/Powheg/production/V2/13TeV/Higgs/VBF_H_JHUGen_HWW2L2Nu_NNPDF30_13TeV/JHUGen_VBF_H_WW2L2Nu_M'+mass+'.input'
 
 
 nevents = '100'
